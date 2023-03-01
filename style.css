@@ -1,0 +1,35 @@
+:root {
+  	--color-one: #FFEA20;
+	--color-two: #8DCBE6;
+	--color-three: #9DF1DF;
+	--color-four: #E3F6FF;
+
+  	--color-one: #F7EC09;
+	--color-two: #3EC70B;
+	--color-three: #3B44F6;
+	--color-four: #A149FA;
+  
+  	--color-one: #FFEA20;
+	--color-two: #8DCBE6;
+	--color-three: #9DF1DF;
+	--color-four: #E3F6FF;
+
+  	--color-one: #F0FF42;
+	--color-two: #82CD47;
+	--color-three: #54B435;
+	--color-four: #379237;
+}
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: var(--color-one);
+  color: var(--color-four);
+}
+
+header {
+	padding: 1rem;
+	font-size: 2rem;
+}
