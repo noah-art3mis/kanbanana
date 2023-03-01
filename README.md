@@ -1,2 +1,2 @@
-# curso_ebac_frontend
-## exercicio_jquery
+# Kanbanana
+## A simple stack for your chores

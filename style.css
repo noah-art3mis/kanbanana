@@ -30,6 +30,95 @@
 }
 
 header {
-	padding: 1rem;
+	margin: 1rem;
 	font-size: 2rem;
+}
+
+select {
+	padding: 0.5em;
+	margin-left: 1ch;
+	font-size: 0.5em;
+	border-color: var(--color-two);
+}
+
+main {
+	margin: 0 auto;
+	width: 50%
+}
+
+
+/* === form === */
+
+form {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	margin: 0 auto;
+	width: 200px;
+	
+}
+
+input {
+	border-color: var(--color-two);
+	padding: 0.5em;
+	width: 100%;
+}
+
+.button-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	width: 100%
+}
+
+button {
+	background-color: var(--color-three);
+	color: var(--color-one);
+	border-color: var(--color-two);
+	font-size: 1.5rem;
+	padding: 0.5em;
+	flex: 0 0 auto;
+}
+
+
+ /* === list === */
+
+main ul {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+
+	margin: 1rem;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+
+	list-style: none;
+}
+
+main ul li {
+	background-color: var(--color-two);
+	color: var(--color-one);
+	margin: 1rem;
+	padding: 1.2em 3.5em;
+	cursor: pointer;
+}
+
+body > footer {
+	font-size: 0.8rem;
+	text-align: right;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+.clicked {
+	text-decoration: line-through;
 }

@@ -5,16 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script defer src="main.js"></script>
-  <title>Lista de Tarefas</title>
+  <title>Kanbanana Stack - To-do List</title>
 </head>
 <body>
   <header>
-<h1>Kanbanana</h1>
+    <h1>Kanbanana</h1>
+    <select name="mode" id="mode">
+        <option value="list" selected>to-do list</option>
+        <option value="stack">stack</option>
+    </select>
   </header>
   <main>
-
+    <form>
+      <input type="text" name="" id="new-item-input" placeholder="new item">
+      <div class="button-wrapper">
+        <button id="push-btn" type="submit">Push</button>
+        <button id="pop-btn" type="reset">Pop</button>
+      </div>
+    </form>
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit
+      </li>
+      <li>
+        ipsum
+      </li>
+    </ul>
   </main>
+  <footer>
+    <p> &copy; Gustavo Araújo - Todos os direitos reservados - 2023</p> 
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+  <script src="main.js"></script>
 </body>
 </html>
