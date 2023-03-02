@@ -1,19 +1,4 @@
 :root {
-  	--color-one: #FFEA20;
-	--color-two: #8DCBE6;
-	--color-three: #9DF1DF;
-	--color-four: #E3F6FF;
-
-  	--color-one: #F7EC09;
-	--color-two: #3EC70B;
-	--color-three: #3B44F6;
-	--color-four: #A149FA;
-  
-  	--color-one: #FFEA20;
-	--color-two: #8DCBE6;
-	--color-three: #9DF1DF;
-	--color-four: #E3F6FF;
-
   	--color-one: #F0FF42;
 	--color-two: #82CD47;
 	--color-three: #54B435;
@@ -30,22 +15,14 @@
 }
 
 header {
-	margin: 1rem;
+	margin: 1rem 1rem 3rem 1rem;
 	font-size: 2rem;
-}
-
-select {
-	padding: 0.5em;
-	margin-left: 1ch;
-	font-size: 0.5em;
-	border-color: var(--color-two);
 }
 
 main {
 	margin: 0 auto;
 	width: 50%
 }
-
 
 /* === form === */
 
@@ -61,10 +38,21 @@ form {
 	
 }
 
+#error-message {
+	display: none;
+	padding: 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
 input {
 	border-color: var(--color-two);
 	padding: 0.5em;
 	width: 100%;
+}
+
+input:focus-visible {
+	outline: var(--color-three) solid 1px;
 }
 
 .button-wrapper {
@@ -79,9 +67,12 @@ button {
 	background-color: var(--color-three);
 	color: var(--color-one);
 	border-color: var(--color-two);
+	text-transform: uppercase;
+	font-weight: bold;
 	font-size: 1.5rem;
 	padding: 0.5em;
 	flex: 0 0 auto;
+	width: 50%;
 }
 
 
@@ -119,6 +110,7 @@ body > footer {
 	bottom: 0;
 }
 
-.clicked {
+.crossed-out {
 	text-decoration: line-through;
+	user-select: none;
 }

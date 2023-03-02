@@ -1,31 +1,35 @@
 $(document).ready( () => {
 
-	//Mode Select
-
-	
 	$('form').on('submit', (e) => {
 		e.preventDefault();
 		const newItem = $("#new-item-input").val();
 		
-		if (newItem) {
+		if (isValid(newItem)) {
 			kbnPush(newItem);
+			resetInput();
+			resetErrors();
 		}
 		else {
-			alert("what are you trying to push?")
+			showError("please input a value before pushing");
 		}
-		
-		$("#new-item-input").val("");
 	})
 
 	$('form').on('reset', (e) => {
-		e.preventDefault();
-		kbnPop();
+		if (isStackEmpty()) {
+			showError("nothing to pop, stack is empty");
+		}
+		else {
+			e.preventDefault();
+			kbnPop();
+			resetErrors();
+		}
 	})
 
 	$('li').click( (e) => {
-		e.target.addClass('clicked')
+		$(e.target).toggleClass("crossed-out");
 	});
 })
+
 function kbnPush(newItem) {
 	const item = $(`<li>${newItem}</li>`);
 	$('ul').prepend(item);
@@ -34,17 +38,44 @@ function kbnPush(newItem) {
 
 function pushAnimation(item) {
 	$(item).hide();
-	$(item).fadeIn();		
+	$(item).fadeIn();
+	//TODO add curve to banana
 }
 
 function kbnPop() {
 	const item = $('li:first');
 	popAnimation(item);
+	//TODO add spring animation
 }
 
 function popAnimation (item) {
+	//todo
+	item.fadeOut( () => {
+		item.remove();
+	});
 }
 
 function crossOut(item) {
-	item.css('text-decoration', 'line-through')
+	item.css('text-decoration', 'line-through');
+}
+
+function isValid(item) {
+	return !!item;
+}
+
+function showError(message) {
+	$('#error-message').text(message);
+	$('#error-message').show(100);
+}
+
+function resetInput() {
+	$("#new-item-input").val("");
+}
+
+function resetErrors() {
+	$('#error-message').hide();
+}
+
+function isStackEmpty() {
+	return $('ul').children().length === 0;
 }
