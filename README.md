@@ -1,2 +1,2 @@
 # Kanbanana
-## A simple stack for your chores
+## a minimalist stack to-do list
