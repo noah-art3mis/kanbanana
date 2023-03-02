@@ -25,7 +25,7 @@ $(document).ready( () => {
 		}
 	})
 
-	$('li').click( (e) => {
+	$('ul').click( (e) => {
 		$(e.target).toggleClass("crossed-out");
 	});
 })
