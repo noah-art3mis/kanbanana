@@ -1,2 +1,2 @@
 # Kanbanana
-## a minimalist stack to-do list
+minimalist stack to-do list
